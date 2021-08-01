@@ -3,7 +3,7 @@
         <div class="row align-items-center" id="mobile-menu-container">
             <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                 <div class="logo">
-                    <a href="{{ url('/') }}"><img src="assets/images/logo.png" alt=""></a>
+                    <a href="{{ url('/') }}"><img src="{{ asset('assets/images/logo.png') }}" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-7 md-none">
@@ -39,9 +39,9 @@
     @else
         <div class="hero-section">
             <div class="container vector-container">
-                <img src="assets/images/circle.png" class="circle-vector" alt="circle-vector">
-                <img src="assets/images/red-vector.png" class="red-vector" alt="red-vector">
-                {{-- <img src="assets/images/yellow-vector.png" class="yellow-vector" alt="yellow-vector"> --}}
+                <img src="{{ asset('assets/images/circle.png') }}" class="circle-vector" alt="circle-vector">
+                <img src="{{ asset('assets/images/red-vector.png') }}" class="red-vector" alt="red-vector">
+                {{-- <img src="{{ asset('assets/images/yellow-vector.png') }}" class="yellow-vector" alt="yellow-vector"> --}}
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="hero-title">
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="banner">
-                            <img src="assets/images/banner.png" class="wow fadeInRight" alt="banner">
+                            <img src="{{ asset('assets/images/banner.png') }}" class="wow fadeInRight" alt="banner">
                         </div>
                     </div>
                 </div>

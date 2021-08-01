@@ -95,7 +95,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="breadcrumb-left">
-                            <img src="assets/images/slide-left.png" alt="">
+                            <img src="{{ asset('assets/images/slide-left.png') }}" alt="">
                             <h1>{{ title_case(str_replace('-', ' ', request()->segment(1))) }}</h1>
                             <h3><a href="{{ url('/') }}">Home</a> - {{ title_case(str_replace('-', ' ', request()->segment(1))) }}</h3>
                         </div>

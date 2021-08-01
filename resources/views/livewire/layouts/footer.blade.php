@@ -1,13 +1,13 @@
 <footer class="footer-section padding-top-90">
     <div class="container vector-container">
-        <img src="assets/images/yellow-vector.png" class="yellow-vector" alt="">
-        <img src="assets/images/dot-vector.png" class="dot-vector" alt="">
-        <img src="assets/images/red-vector.png" class="red-vector" alt="">
+        <img src="{{ asset('assets/images/yellow-vector.png') }}" class="yellow-vector" alt="">
+        <img src="{{ asset('assets/images/dot-vector.png') }}" class="dot-vector" alt="">
+        <img src="{{ asset('assets/images/red-vector.png') }}" class="red-vector" alt="">
         <div class="row">
 
             <div class="col-lg-3 col-md-6">
                 <div class="footer-first">
-                    <a href="home2.html"><img src="assets/images/logo.png" class="logo" alt=""></a>
+                    <a href="home2.html"><img src="{{ asset('assets/images/logo.png') }}" class="logo" alt=""></a>
                     <p class="home2-p-color">{!! App\Models\About::byBranch()->mission !!}</p>
                     <div class="footer-social">
                         <a href="home2.html#">
@@ -51,19 +51,19 @@
                 <div class="footer-last">
                     <h3 class="home2-heading-color">Get in Touch!</h3>
                     <div class="widget-bottom">
-                        <img src="assets/images/vector-09.png" alt="">
+                        <img src="{{ asset('assets/images/vector-09.png') }}" alt="">
                         <div class="widget-content">
                             <p class="home2-p-color">Ikuti, Mbeya (M), Mbeya Tanzania</p>
                         </div>
                     </div>
                     <div class="widget-bottom">
-                        <img src="assets/images/home2-footer-mail-icon.png" alt="">
+                        <img src="{{ asset('assets/images/home2-footer-mail-icon.png') }}" alt="">
                         <div class="widget-content">
                             <p class="home2-p-color">maishabora@gmail.com</p>
                         </div>
                     </div>
                     <div class="widget-bottom">
-                        <img src="assets/images/vector78.png" alt="">
+                        <img src="{{ asset('assets/images/vector78.png') }}" alt="">
                         <div class="widget-content">
                             <p class="home2-p-color">Phone : +255 755456529 Phone: + 255 758989858</p>
                         </div>
