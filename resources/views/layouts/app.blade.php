@@ -151,7 +151,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href="index2.html"><b>Better Life</b> Portal</a>
+        <a href="{{ url('/') }}"><b>Better Life</b> Portal</a>
       </div>
 
       @if (session('status'))
