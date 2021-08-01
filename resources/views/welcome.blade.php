@@ -16,7 +16,7 @@
                                     </a>
                                     <p class="home2-p-color">To help Orphans and disabled children by supporting Education facilities, and wheelchair in collaboration with stakeholders.</p>
                                     <a href="donation-list.html" class="readmore">Read More</a>
-                                    <img src="assets/images/vector-saline.png" class="vector-bg" alt="">
+                                    <img src="{{ asset('assets/images/vector-saline.png') }}" class="vector-bg" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
@@ -27,7 +27,7 @@
                                     <p class="home2-p-color">To educate the society to have proper infrastructure for disabled children such toilet to establish wash clubs in special need schools
                                     </p>
                                     <a href="donation-list.html" class="readmore">Read More</a>
-                                    <img src="assets/images/vector-bottle.png" class="vector-bg" alt="">
+                                    <img src="{{ asset('assets/images/vector-bottle.png') }}" class="vector-bg" alt="">
 
                                 </div>
                             </div>
@@ -39,7 +39,7 @@
                                     <p class="home2-p-color">Healthy Life Need demoz selle whalefish zebra lion fish
                                         pelican</p>
                                         <a href="donation-list.html" class="readmore">Read More</a>
-                                    <img src="assets/images/vector-users.png" class="vector-bg" alt="">
+                                    <img src="{{ asset('assets/images/vector-users.png') }}" class="vector-bg" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
@@ -49,7 +49,7 @@
                                     </a>
                                     <p class="home2-p-color">{{ str_limit('To educate the society on the right of the disabled children and orphans by emphasizing in seminar presentations, duplications of flyers, invitation in media tours (especially Radio stations).', 70) }}</p>
                                     <a href="donation-list.html" class="readmore">Read More</a>
-                                    <img src="assets/images/vector-tshirt.png" class="vector-bg" alt="">
+                                    <img src="{{ asset('assets/images/vector-tshirt.png') }}" class="vector-bg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -57,10 +57,10 @@
                 </div>
                 <div class="col-lg-6 align-self-center">
                     <div class="home2-blog-video">
-                        <img src="assets/images/blog-img.png" alt="">
+                        <img src="{{ asset('assets/images/blog-img.png') }}" alt="">
                         <a href="https://www.youtube.com/watch?v=E1xkXZs0cAQ" class="blog-popup-video">
                             <div class="play-btn">
-                                <span class="play-icon"><img src="assets/images/play-circle.png" alt=""></span>
+                                <span class="play-icon"><img src="{{ asset('assets/images/play-circle.png') }}" alt=""></span>
                             </div>
                         </a>
                         <div class="bottom-quote-text">

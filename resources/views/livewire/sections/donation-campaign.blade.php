@@ -20,7 +20,7 @@
                     <div class="campaign-column">
                         <a href="home2.html#"><span class="img-top-btn home2-img-top-btn">Health</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/campaign-1.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/campaign-1.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <div class="animated-progress-bar">
@@ -45,7 +45,7 @@
                     <div class="campaign-column">
                         <a href="home2.html#"><span class="img-top-btn home2-img-top-btn">Water</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/campaign-2.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/campaign-2.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <div class="animated-progress-bar">
@@ -68,7 +68,7 @@
                     <div class="campaign-column">
                         <a href="home2.html#"><span class="img-top-btn home2-img-top-btn">Food</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/campaign-3.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/campaign-3.png') }}" alt=""></a>
 
                         </div>
                         <div class="padding-20">
@@ -92,7 +92,7 @@
                     <div class="campaign-column">
                         <a href="home2.html#"><span class="img-top-btn home2-img-top-btn">Education</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/campaign-4.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/campaign-4.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <div class="animated-progress-bar">
@@ -116,7 +116,7 @@
                     <div class="campaign-column">
                         <a href="home2.html#"><span class="img-top-btn home2-img-top-btn">Environment</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/campaign-5.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/campaign-5.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <div class="animated-progress-bar">
@@ -139,7 +139,7 @@
                     <div class="campaign-column">
                         <a href="home2.html#"><span class="img-top-btn home2-img-top-btn">Cloth</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/campaign-6.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/campaign-6.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <div class="animated-progress-bar">

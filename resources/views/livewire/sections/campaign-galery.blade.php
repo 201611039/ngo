@@ -18,16 +18,16 @@
             <div class="col-lg-12">
                 <div class="row grid">
                     <div class="col-lg-6 col-md-6 grid-item education">
-                        <div class="messonry-img" style="background-image: url('assets/images/grid-1.png');">
+                        <div class="messonry-img" style="background-image: url({{ asset('assets/images/grid-1.png') }});">
                             <div class="describe">
                                 <div class="project-gallery">
-                                    <a href="assets/images/grid-1.png" alt="" class="p-gallery-img open-gallery"><i
+                                    <a href="{{ asset('assets/images/grid-1.png') }}" alt="" class="p-gallery-img open-gallery"><i
                                             class="far fa-images"></i></a>
-                                    <a href="assets/images/grid-2.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-3.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-4.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-5.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-6.png" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-2.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-3.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-4.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-5.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-6.png') }}" alt="" class="p-gallery-img"></a>
                                 </div>
                                 <div class="content">
                                     <a href="project-single.html"><span>Water</span></a>
@@ -39,16 +39,16 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 grid-item water">
-                        <div class="messonry-img" style="background-image: url('assets/images/grid-2.png');">
+                        <div class="messonry-img" style="background-image: url({{ asset('assets/images/grid-2.png') }});">
                             <div class="describe">
                                 <div class="project-gallery">
-                                    <a href="assets/images/grid-1.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-2.png" alt="" class="p-gallery-img open-gallery"><i
+                                    <a href="{{ asset('assets/images/grid-1.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-2.png') }}" alt="" class="p-gallery-img open-gallery"><i
                                             class="far fa-images"></i></a>
-                                    <a href="assets/images/grid-3.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-4.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-5.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-6.png" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-3.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-4.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-5.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-6.png') }}" alt="" class="p-gallery-img"></a>
                                 </div>
                                 <div class="content">
                                     <a href="project-single.html"><span>Water</span></a>
@@ -60,16 +60,16 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 grid-item environment">
-                        <div class="messonry-img" style="background-image: url('assets/images/grid-3.png');">
+                        <div class="messonry-img" style="background-image: url({{ asset('assets/images/grid-3.png') }});">
                             <div class="describe">
                                 <div class="project-gallery">
-                                    <a href="assets/images/grid-1.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-2.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-3.png" alt="" class="p-gallery-img open-gallery"><i
+                                    <a href="{{ asset('assets/images/grid-1.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-2.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-3.png') }}" alt="" class="p-gallery-img open-gallery"><i
                                             class="far fa-images"></i></a>
-                                    <a href="assets/images/grid-4.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-5.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-6.png" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-4.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-5.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-6.png') }}" alt="" class="p-gallery-img"></a>
                                 </div>
                                 <div class="content">
                                     <a href="project-single.html"><span>Water</span></a>
@@ -81,16 +81,16 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 grid-item health">
-                        <div class="messonry-img" style="background-image: url('assets/images/grid-4.png');">
+                        <div class="messonry-img" style="background-image: url({{ asset('assets/images/grid-4.png') }});">
                             <div class="describe">
                                 <div class="project-gallery">
-                                    <a href="assets/images/grid-1.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-2.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-3.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-4.png" alt="" class="p-gallery-img open-gallery"><i
+                                    <a href="{{ asset('assets/images/grid-1.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-2.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-3.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-4.png') }}" alt="" class="p-gallery-img open-gallery"><i
                                             class="far fa-images"></i></a>
-                                    <a href="assets/images/grid-5.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-6.png" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-5.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-6.png') }}" alt="" class="p-gallery-img"></a>
                                 </div>
                                 <div class="content">
                                     <a href="project-single.html"><span>Water</span></a>
@@ -102,16 +102,16 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 grid-item environment">
-                        <div class="messonry-img" style="background-image: url('assets/images/grid-5.png');">
+                        <div class="messonry-img" style="background-image: url({{ asset('assets/images/grid-5.png') }});">
                             <div class="describe">
                                 <div class="project-gallery">
-                                    <a href="assets/images/grid-1.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-2.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-3.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-4.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-5.png" alt="" class="p-gallery-img open-gallery"><i
+                                    <a href="{{ asset('assets/images/grid-1.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-2.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-3.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-4.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-5.png') }}" alt="" class="p-gallery-img open-gallery"><i
                                             class="far fa-images"></i></a>
-                                    <a href="assets/images/grid-6.png" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-6.png') }}" alt="" class="p-gallery-img"></a>
                                 </div>
                                 <div class="content">
                                     <a href="project-single.html"><span>Water</span></a>
@@ -123,15 +123,15 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 grid-item water">
-                        <div class="messonry-img" style="background-image: url('assets/images/grid-6.png');">
+                        <div class="messonry-img" style="background-image: url({{ asset('assets/images/grid-6.png') }});">
                             <div class="describe">
                                 <div class="project-gallery">
-                                    <a href="assets/images/grid-1.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-2.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-3.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-4.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-5.png" alt="" class="p-gallery-img"></a>
-                                    <a href="assets/images/grid-6.png" alt="" class="p-gallery-img open-gallery"><i
+                                    <a href="{{ asset('assets/images/grid-1.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-2.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-3.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-4.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-5.png') }}" alt="" class="p-gallery-img"></a>
+                                    <a href="{{ asset('assets/images/grid-6.png') }}" alt="" class="p-gallery-img open-gallery"><i
                                             class="far fa-images"></i></a>
                                 </div>
                                 <div class="content">

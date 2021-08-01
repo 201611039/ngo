@@ -83,9 +83,9 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="form-left">
-                        <img src="assets/images/contact-form-img.png" alt="">
+                        <img src="{{ asset('assets/images/contact-form-img.png') }}" alt="">
                         <div class="left-content">
-                            <img src="assets/images/form-vector.png" class="margin-bottom-25" alt="">
+                            <img src="{{ asset('assets/images/form-vector.png') }}" class="margin-bottom-25" alt="">
                             <h2 class="margin-bottom-25">Join the Better Life Team</h2>
                             <a href="contact.html#" class="call-to-action-btn margin-bottom-25">Join Now</a>
                         </div>

@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner">
-                        <img src="assets/images/event-single.png" alt="">
+                        <img src="{{ asset('assets/images/event-single.png') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -257,17 +257,17 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                             <div class="brands">
-                                                <img src="assets/images/gifts.png" alt="">
+                                                <img src="{{ asset('assets/images/gifts.png') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                             <div class="brands">
-                                                <img src="assets/images/love.png" alt="">
+                                                <img src="{{ asset('assets/images/love.png') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                             <div class="brands">
-                                                <img src="assets/images/charity-logo.png" alt="">
+                                                <img src="{{ asset('assets/images/charity-logo.png') }}" alt="">
                                             </div>
                                         </div>
                                     </div>

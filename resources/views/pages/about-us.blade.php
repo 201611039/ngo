@@ -29,8 +29,8 @@
 
     <!-- About Donate Section -->
     <section class="about-donate-section vector-container padding-top-115 padding-bottom-122">
-        <img src="assets/images/dot-vector.png" alt="" class="dot-vector">
-        <img src="assets/images/red-vector.png" alt="" class="red-vector">
+        <img src="{{ asset('assets/images/dot-vector.png') }}" alt="" class="dot-vector">
+        <img src="{{ asset('assets/images/red-vector.png') }}" alt="" class="red-vector">
         <div class="container">
             <div class="about-blog-section padding-bottom-75">
                 <div class="row">
@@ -38,7 +38,7 @@
                         <div class="blog-content">
                             <div class="left-logo">
                                 <div class="left-icon">
-                                    <span><img src="assets/images/png-icons/salline-icon.png" alt=""></span>
+                                    <span><img src="{{ asset('assets/images/png-icons/salline-icon.png') }}" alt=""></span>
                                 </div>
                             </div>
                             <div class="help-blog">
@@ -54,7 +54,7 @@
                         <div class="blog-content">
                             <div class="left-logo">
                                 <div class="left-icon">
-                                    <span><img src="assets/images/png-icons/user-icon.png" alt=""></span>
+                                    <span><img src="{{ asset('assets/images/png-icons/user-icon.png') }}" alt=""></span>
                                 </div>
                             </div>
                             <div class="help-blog">
@@ -70,7 +70,7 @@
                         <div class="blog-content">
                             <div class="left-logo">
                                 <div class="left-icon">
-                                    <span><img src="assets/images/icon-1.png" alt=""></span>
+                                    <span><img src="{{ asset('assets/images/icon-1.png') }}" alt=""></span>
                                 </div>
                             </div>
                             <div class="help-blog">
@@ -86,7 +86,7 @@
                         <div class="blog-content">
                             <div class="left-logo">
                                 <div class="left-icon">
-                                    <span><img src="assets/images/icon-2.png" alt=""></span>
+                                    <span><img src="{{ asset('assets/images/icon-2.png') }}" alt=""></span>
                                 </div>
                             </div>
                             <div class="help-blog">
@@ -111,7 +111,7 @@
     <!-- Volunteer Section -->
     <section class="volunteer-section padding-top-110 padding-bottom-90">
         <div class="container vector-container">
-            <img src="assets/images/red-vector.png" class="red-vector" alt="">
+            <img src="{{ asset('assets/images/red-vector.png') }}" class="red-vector" alt="">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title text-center margin-bottom-55">

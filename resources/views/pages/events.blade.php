@@ -14,7 +14,7 @@
                     <div class="campaign-column">
                         <a href="event-list.html#"><span class="img-top-btn">Health</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/donation-list-4.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/donation-list-4.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <a href="event-single.html">
@@ -34,7 +34,7 @@
                     <div class="campaign-column">
                         <a href="event-list.html"><span class="img-top-btn">Water</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/donation-list-5.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/donation-list-5.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <a href="event-single.html">
@@ -54,7 +54,7 @@
                     <div class="campaign-column">
                         <a href="event-list.html"><span class="img-top-btn">Food</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/event-list-1.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/event-list-1.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <a href="event-single.html">
@@ -75,7 +75,7 @@
                     <div class="campaign-column">
                         <a href="event-list.html#"><span class="img-top-btn">Education</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/donation-list-1.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/donation-list-1.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <a href="event-single.html">
@@ -95,7 +95,7 @@
                     <div class="campaign-column">
                         <a href="event-list.html#"><span class="img-top-btn">Environment</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/donation-list-5.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/donation-list-5.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <a href="event-single.html">
@@ -115,7 +115,7 @@
                     <div class="campaign-column">
                         <a href="event-list.html#"><span class="img-top-btn">Cloth</span></a>
                         <div class="img-container">
-                            <a href="event-single.html"><img src="assets/images/donation-list-6.png" alt=""></a>
+                            <a href="event-single.html"><img src="{{ asset('assets/images/donation-list-6.png') }}" alt=""></a>
                         </div>
                         <div class="padding-20">
                             <a href="event-single.html">
