@@ -46,6 +46,7 @@ class EventController extends Controller
     {
         $this->authorize('event-create');
 
+        return $request;
 
     }
 

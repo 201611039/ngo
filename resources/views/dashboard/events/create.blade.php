@@ -15,7 +15,7 @@
 
                     <div class="col-sm-6">
                         <div class="form-group @error('title') has-error @enderror">
-                            <label for="title">Title</label>
+                            <label for="title">Title <span class="text-danger">*</span></label>
                             <input id="title" class="form-control" value="{{ old('title') }}" type="text" name="title">
                         </div>
                         @error('title')
@@ -25,26 +25,26 @@
 
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="venue">Venue</label>
+                            <label for="venue">Venue <span class="text-danger">*</span></label>
                             <input id="venue" class="form-control" type="text" name="venue">
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="organizer">Organizer</label>
+                            <label for="organizer">Organizer <span class="text-danger">*</span></label>
                             <input id="organizer" class="form-control" type="text" name="organizer">
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="title">Address</label>
+                            <label for="title">Address </label>
                             <textarea name="address" class="form-control" id="address" rows="5"></textarea>
                         </div>
                     </div>
 
-                    <div class="col-sm-6">
+                    {{-- <div class="col-sm-6">
                         <div class="form-group">
                             <label for="category">Category</label>
                             <select id="category" class="form-control select2" style="width: 100%;" name="category_id">
@@ -60,16 +60,16 @@
                                 <option disabled></option>
                             </select>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="form-group col-sm-12">
-                        <label for="body">Body</label>
+                        <label for="body">Body <span class="text-danger">*</span></label>
                         <textarea id="body" class="form-control" name="body">{{ old('body') }}</textarea>
                     </div>
 
                     <!-- Date and time range -->
-                    <div class="form-group col-sm-12">
-                        <label>Event date and time range:</label>
+                    <div class="form-group col-sm-6">
+                        <label>Event date and time range <span class="text-danger">*</span></label>
 
                         <div class="input-group">
                         <div class="input-group-addon">
@@ -78,6 +78,19 @@
                         <input type="text" name="event-date" class="form-control" id="event-date">
                         </div>
                         <!-- /.input group -->
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="sponsor">Sponsor</label>
+                        <select id="sponsor" class="form-control" style="width: 100%;" multiple name="sponsor_id[]">
+                            @foreach (App\Models\Sponsor::all() as $sponsor)
+                                <option data-path="{{ $sponsor->filePath() }}" value="{{ $sponsor->id }}">{{ $sponsor->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <button type="submit" class="btn btn-primary">Post</button>
                     </div>
                 </form>
             </div>
@@ -121,8 +134,25 @@
 <script src="{{ asset('bower_components/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
 
 <script>
+
     $(function () {
+
+        function formatSponsor (sponsor) {
+            if (!sponsor.id) {
+                return sponsor.text;
+            }
+            var $sponsor = $(
+                '<span><img width="25" src="' + $(sponsor.element).data('path') + '" class="image-responsive" /> ' + sponsor.text + '</span>'
+            );
+            return $sponsor;
+        };
+
         $('#category').select2()
+        $('#sponsor').select2({
+            placeholder: 'Select sponsors',
+            templateResult: formatSponsor,
+            templateSelection: formatSponsor,
+        })
         $('#tags').select2({
             placeholder: 'Select tags'
         })

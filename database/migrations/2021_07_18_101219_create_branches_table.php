@@ -20,6 +20,7 @@ class CreateBranchesTable extends Migration
             $table->string('address');
             $table->string('email');
             $table->string('phone');
+            $table->string('slug')->nullable();
             $table->boolean('type')->default(0)->comment('0 = branch, 1= HQ');
             $table->timestamps();
         });

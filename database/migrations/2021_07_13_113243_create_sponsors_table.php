@@ -17,8 +17,10 @@ class CreateSponsorsTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('short_name')->unique()->nullable();
-            $table->boolean('type')->default(0)->comment('0 = temporary, 1= contract');
+            $table->boolean('type')->default(0)->comment('0 = temporary, 1= permanent');
+            $table->string('slug')->nullable();
             $table->string('logo')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

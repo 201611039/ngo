@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class EventSponsor extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
+
+    public function sponsor()
+    {
+        return $this->belongsTo(Sponsor::class);
+    }
 }

@@ -17,6 +17,7 @@
         "spatie/laravel-newsletter": "^4.10",
         "spatie/laravel-permission": "^4.2",
         "spatie/laravel-sluggable": "^2.6",
+        "yoeunes/toastr": "^1.2",
         "zacksmash/fortify-ui": "^1.4"
     },
     "require-dev": {

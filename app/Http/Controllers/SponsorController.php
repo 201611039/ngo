@@ -17,7 +17,7 @@ class SponsorController extends Controller
         $this->authorize('sponsor-view');
 
         $sponsors = Sponsor::all();
-        
+
         return view('dashboard.sponsor.index', [
             'sponsors' => $sponsors
         ]);
@@ -32,6 +32,7 @@ class SponsorController extends Controller
     {
         $this->authorize('sponsor-create');
 
+        return view('dashboard.sponsor.create');
     }
 
     /**
@@ -44,6 +45,23 @@ class SponsorController extends Controller
     {
         $this->authorize('sponsor-create');
 
+        request()->validate([
+            'name' => ['required', 'max:255', 'string'],
+            'short_name' => ['required', 'max:255', 'string'],
+            'type' => ['required', 'integer'],
+            'logo' => ['required', 'max:3070', 'file', 'mimes:png,jpg,jpeg'],
+        ]);
+
+        Sponsor::firstOrCreate([
+            'name' => $request->name,
+            'short_name' => $request->short_name,
+            'type' => $request->type,
+        ])->addMedia($request->logo)
+        ->toMediaCollection();
+
+
+        toastr('Sponsor added successfully');
+        return redirect()->route('sponsors.index');
     }
 
 
@@ -57,6 +75,9 @@ class SponsorController extends Controller
     {
         $this->authorize('sponsor-update');
 
+        return view('dashboard.sponsor.edit', [
+            'sponsor' => $sponsor
+        ]);
     }
 
     /**
@@ -70,6 +91,30 @@ class SponsorController extends Controller
     {
         $this->authorize('sponsor-update');
 
+        request()->validate([
+            'name' => ['required', 'max:255', 'string'],
+            'short_name' => ['required', 'max:255', 'string'],
+            'type' => ['required', 'integer'],
+            'logo' => ['nullable', 'max:3070', 'file', 'mimes:png,jpg,jpeg'],
+        ]);
+
+        $sponsor->update([
+            'name' => $request->name,
+            'short_name' => $request->short_name,
+            'type' => $request->type,
+        ]);
+
+        if ($request->hasFile('logo')) {
+            // delete previous logo
+            $sponsor->getFirstMedia()->delete();
+
+            // store new logo
+            $sponsor->addMedia($request->logo)
+            ->toMediaCollection();
+        }
+
+        toastr('Sponsor updated successfully');
+        return redirect()->route('sponsors.index');
     }
 
     /**
@@ -82,5 +127,9 @@ class SponsorController extends Controller
     {
         $this->authorize('sponsor-delete');
 
+        $sponsor->delete();
+
+        toastr('Sponsor deleted successfully');
+        return redirect()->route('sponsors.index');
     }
 }

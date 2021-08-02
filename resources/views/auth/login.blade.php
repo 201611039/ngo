@@ -6,7 +6,7 @@
         <form action="{{ route('login') }}" method="post">
             @csrf
           <div class="form-group has-feedback @error('email') has-error @enderror">
-            <input type="email" name="email" class="form-control" placeholder="Email">
+            <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Email">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             @error('email')
                 <span class="text-danger">
