@@ -10,13 +10,14 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <form action="{{ route('events.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('events.update', $event->slug) }}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
 
                     <div class="col-sm-6">
                         <div class="form-group @error('title') has-error @enderror">
                             <label for="title">Title <span class="text-danger">*</span></label>
-                            <input id="title" class="form-control" value="{{ old('title') }}" type="text" name="title">
+                            <input id="title" class="form-control" value="{{ old('title')??$event->title }}" type="text" name="title">
                             @error('title')
                                 <span class="text-danger"><small>{{ $message }}</small></span>
                             @enderror
@@ -26,7 +27,7 @@
                     <div class="col-sm-6">
                         <div class="form-group  @error('venue') has-error @enderror">
                             <label for="venue">Venue <span class="text-danger">*</span></label>
-                            <input id="venue" value="{{ old('venue') }}" class="form-control" type="text" name="venue">
+                            <input id="venue" value="{{ old('venue')??$event->venue }}" class="form-control" type="text" name="venue">
                             @error('venue')
                                 <span class="text-danger"><small>{{ $message }}</small></span>
                             @enderror
@@ -36,7 +37,7 @@
                     <div class="col-sm-6">
                         <div class="form-group  @error('organizer') has-error @enderror">
                             <label for="organizer">Organizer <span class="text-danger">*</span></label>
-                            <input id="organizer" class="form-control" value="{{ old('organizer') }}" type="text" name="organizer">
+                            <input id="organizer" class="form-control" value="{{ old('organizer')??$event->organizer }}" type="text" name="organizer">
                             @error('organizer')
                                 <span class="text-danger"><small>{{ $message }}</small></span>
                             @enderror
@@ -46,7 +47,7 @@
                     <div class="col-sm-6">
                         <div class="form-group  @error('address') has-error @enderror">
                             <label for="address">Address </label>
-                            <textarea name="address" class="form-control" id="address" rows="5">{{ old('address') }}</textarea>
+                            <textarea name="address" class="form-control" id="address" rows="5">{{ old('address')??$event->address }}</textarea>
                             @error('address')
                                 <span class="text-danger"><small>{{ $message }}</small></span>
                             @enderror
@@ -73,7 +74,7 @@
 
                     <div class="form-group  @error('body') has-error @enderror col-sm-12">
                         <label for="body">Body <span class="text-danger">*</span></label>
-                        <textarea id="body" class="form-control" name="body">{{ old('body') }}</textarea>
+                        <textarea id="body" class="form-control" name="body">{{ old('body')??$event->body }}</textarea>
                         @error('body')
                             <span class="text-danger"><small>{{ $message }}</small></span>
                         @enderror
@@ -99,7 +100,7 @@
                         <label for="sponsor">Sponsor</label>
                         <select id="sponsor" class="form-control" style="width: 100%;" multiple name="sponsor_id[]">
                             @foreach (App\Models\Sponsor::all() as $sponsor)
-                                <option data-path="{{ $sponsor->filePath() }}" {{ collect(old('sponsor_id'))->contains($sponsor->id)? 'selected':'' }} value="{{ $sponsor->id }}">{{ $sponsor->name }}</option>
+                                <option data-path="{{ $sponsor->filePath() }}" {{ old('sponsor_id'? ((collect(old('sponsor_id'))->contains($sponsor->id))? 'selected':''):(($event->sponsors->contains('sponsor_id', $sponsor->id))? 'selected':'')) }} value="{{ $sponsor->id }}">{{ $sponsor->name }}</option>
                             @endforeach
                         </select>
                         @error('sponsor')
@@ -117,9 +118,10 @@
                         </div>
                     </div>
 
+                    @livewire('images.view', ['event' => $event], key($event->id))
 
                     <div class="form-group col-sm-12">
-                        <button type="submit" class="btn btn-primary">Post</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </div>
                 </form>
             </div>
@@ -197,7 +199,7 @@
 
 
         //Date range picker with time picker
-        $('#event_date').daterangepicker({ timePicker: true, timePickerIncrement: 30, locale: { format: 'MM/DD/YYYY hh:mm A' }, drops: 'up', minDate: new Date(),})
+        $('#event_date').daterangepicker({ timePicker: true, timePickerIncrement: 30, locale: { format: 'MM/DD/YYYY hh:mm A' }, drops: 'up', startDate: @json($event->start_date->format('m/d/Y h:i A')), endDate: @json($event->end_date->format('m/d/Y h:i A'))})
 
     });
 </script>

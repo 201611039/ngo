@@ -27,7 +27,7 @@ class Navigation extends Component
                 'title' => 'Events',
                 'url' => route('events'),
             ], [
-                'title' => 'Contact Us',
+                'title' => 'Contact',
                 'url' => route('contact'),
             ], [
                 'title' => 'Portal',

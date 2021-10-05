@@ -19,6 +19,11 @@ class Event extends Model implements HasMedia
 
     protected $guarded = [];
 
+    protected $casts = [
+        'start_date' => 'datetime',
+        'end_date' => 'datetime',
+    ];
+
     public function getSlugOptions() : SlugOptions
     {
         return SlugOptions::create()
@@ -44,5 +49,10 @@ class Event extends Model implements HasMedia
     public function sponsors()
     {
         return $this->belongsToMany(Sponsor::class);
+    }
+
+    public function getImagesAttribute()
+    {
+        return $this->getMedia('images');
     }
 }

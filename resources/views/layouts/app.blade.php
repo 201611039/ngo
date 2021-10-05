@@ -27,6 +27,8 @@
 
   @toastr_css
 
+  @livewireStyles
+
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
@@ -147,6 +149,8 @@
     $('.sidebar-menu').tree()
   })
 </script>
+
+@livewireScripts
 
 @yield('js')
 </body>

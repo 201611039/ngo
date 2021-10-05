@@ -73,12 +73,12 @@
                 </div>
                 <div class="col-lg-3 col-md-12">
                     <div class="social">
-                        <a href="index.html#">
+                        <a href="#">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="index.html#"><i class="fab fa-twitter"></i></a>
-                        <a href="index.html#"><i class="fab fa-instagram"></i></a>
-                        <a href="index.html#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>

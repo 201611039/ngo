@@ -24,20 +24,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>X</td>
-                        <td class="text-center">
-                            <a href="#"><i class="fa fa-edit"></i></a>
-                            <a href="#" style="margin-left: 10px;" class="text-danger"><i class="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
+                    @foreach ($events as $key => $event)
+                        <tr>
+                        <td>{{ $key+1 }}</td>
+                            <td>{{ $event->title }}</td>
+                            <td>{{ $event->address }}</td>
+                            <td>{{ $event->organizer }}</td>
+                            <td>{{ $event->venue }}</td>
+                            <td>{{ $event->start_date->format('j F Y - H:i') }}</td>
+                            <td class="text-center">
+                                <a href="{{ route('events.edit', $event->slug) }}"><i class="fa fa-edit"></i></a>
+                                <a href="javascript:void(0)" onclick="deleteEvent({{ $event->id  }})" style="margin-left: 10px;" class="text-danger"><i class="fa fa-trash"></i></a>
+                                <form action="{{ route('events.destroy', $event->slug) }}" id="delete{{ $event->id }}" method="post">@csrf @method('DELETE')</form>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
             </div>
@@ -61,5 +62,11 @@
 
 <script>
     $('#datatable').DataTable()
+
+    function deleteEvent(id) {
+        if (confirm('Are you sure?')) {
+            $('#delete'+id).submit();
+        }
+    }
 </script>
 @endsection
