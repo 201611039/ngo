@@ -3,7 +3,7 @@
         <div class="row align-items-center" id="mobile-menu-container">
             <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                 <div class="logo">
-                    <a href="{{ url('/') }}"><img src="{{ asset('assets/images/logo.png') }}" alt=""></a>
+                    <a href="{{ url('/') }}"><img src="{{ asset('assets/images/logo hr-05.png') }}" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-7 md-none">

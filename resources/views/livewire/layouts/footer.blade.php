@@ -7,7 +7,7 @@
 
             <div class="col-lg-3 col-md-6">
                 <div class="footer-first">
-                    <a href="home2.html"><img src="{{ asset('assets/images/logo.png') }}" class="logo" alt=""></a>
+                    <a href="home2.html"><img src="{{ asset('assets/images/logo hr-05.png') }}" class="logo" alt=""></a>
                     <p class="home2-p-color">{!! App\Models\About::byBranch()->mission !!}</p>
                     <div class="footer-social">
                         <a href="home2.html#">
